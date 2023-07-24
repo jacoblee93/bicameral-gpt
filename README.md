@@ -2,7 +2,7 @@
 
 Bicameral-GPT is an experimental, personalized [generative agent](https://arxiv.org/abs/2304.03442) trained on your journal entries.
 
-![Demo gif of a chat message](/public/bicameral-gpt.gif)
+![Demo conversation with the agent](/public/bicameral-gpt.gif)
 
 Bicameral-GPT ingests a set of "core memories" and journal entries to get a sense of your day to day life and how you are affected by events in it.
 You can then prompt Bicameral-GPT with questions (e.g. `Are you a fan of Westworld?`) and stimuli (e.g.
@@ -11,7 +11,9 @@ It will weigh more recent and impactful experiences more heavily when coming up 
 three weeks ago shouldn't have as much of an impact on your mental state as finding a new job!
 
 Bicameral-GPT can also "summarize" your current traits and status based on your entries, allowing you some LLM-powered insight and introspection
-into your current mental state and character.
+into your current mental state and character:
+
+![The analysis function](/public/analysis.png)
 
 ## What you'll need
 
@@ -26,7 +28,7 @@ Bicameral-GPT uses the [LangChainJS](https://js.langchain.com/docs/get_started/i
 0. Copy the `.env.example` file into a `.env` file.
 1. [Follow these instructions](https://js.langchain.com/docs/modules/data_connection/document_loaders/integrations/web_loaders/notionapi) and create a Notion integration with access to a page in your workspace. The required peer dependencies are already required in this repo, so you can skip that step. Populate your `.env` file's `NOTION_INTEGRATION_TOKEN` with your integration token.
 2. Populate a Notion page with a few journal entries. We recommend you use a structure where each new entry is a subpage within the main page, and the title is the day in parseable format:
-![Example Notion page](/public/notion-log.png)
+![Example Notion journal page format](/public/notion-log.png)
 If the title of a subpage is not a parseable date, Bicameral-GPT will fall back to using the date the subpage was created, which may not align with the journal entry's true date. Populate the `NOTION_PAGE_ID` variable in your `.env` file with your journal page.
 3. Create a new Supabase instance and [follow these instructions](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/supabase) to set up a table for your stored documents. Populate the `SUPABASE_PRIVATE_KEY` and `SUPABASE_URL` variables in your `.env` file appropriately.
 4. Fill in the `OPENAI_API_KEY` variable with your OpenAI key.
