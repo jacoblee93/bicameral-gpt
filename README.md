@@ -10,8 +10,8 @@ You can then prompt Bicameral-GPT with questions (e.g. `Are you a fan of Westwor
 It will weigh more recent and impactful experiences more heavily when coming up with responses - after all, what you had for breakfast
 three weeks ago shouldn't have as much of an impact on your mental state as finding a new job!
 
-Bicameral-GPT can also "summarize" your current traits and status based on your entries, providing a
-way to gain insight and introspection into your own mental state and character.
+Bicameral-GPT can also "summarize" your current traits and status based on your entries, allowing you some LLM-powered insight and introspection
+into your current mental state and character.
 
 ## What you'll need
 
@@ -73,7 +73,7 @@ This attempts to simulate the similar human subconscious process.
 
 Here's an example trace of adding a memory that triggers a reflection step:
 
-https://smith.langchain.com/public/67516985-b2e2-47ba-a3e2-e585f49be50e/r
+https://smith.langchain.com/public/1ab6bdfc-c6c8-47f1-b0d8-6a165b0210eb/r
 
 ### Generating responses
 

@@ -1,6 +1,7 @@
 {
   "name": "bicameral-gpt",
   "version": "0.0.0",
+  "author": "Jacob Lee",
   "private": true,
   "engines": {
     "node": ">=18"
