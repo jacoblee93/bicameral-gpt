@@ -28,6 +28,7 @@ const CORE_MEMORIES = [
 const IMPORTANT_MEMORY_SOURCES = [
   "core",
   "daily_log",
+  "reflection_insight",
 ]
 
 const getNotionLogDocumentDate = (doc) => {
