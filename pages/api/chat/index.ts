@@ -78,11 +78,11 @@ export default async function handler (req: NextRequest, res: NextResponse) {
   const loadedMemory = new GenerativeAgentMemory(
     model,
     retriever,
-    { reflectionThreshold: 8 }
+    { reflectionThreshold: Number(process.env.REFLECTION_THRESHOLD ?? 3) }
   );
   const agent: GenerativeAgent = new GenerativeAgent(model, loadedMemory, {
     name: process.env.AGENT_NAME,
-    age: 30,
+    age: parseInt(process.env.AGENT_AGE),
     traits: process.env.AGENT_CORE_TRAITS,
     status: process.env.AGENT_STATUS,
   });

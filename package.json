@@ -18,7 +18,7 @@
     "@supabase/supabase-js": "^2.26.0",
     "ai": "^2.1.24",
     "dotenv": "^16.3.1",
-    "langchain": "^0.0.115",
+    "langchain": "^0.0.116",
     "next": "latest",
     "notion-to-md": "^3.1.1",
     "react": "^18.2.0",

@@ -107,12 +107,12 @@ const ingest = async () => {
   const agentMemory: GenerativeAgentMemory = new GenerativeAgentMemory(
     llm,
     retriever,
-    { reflectionThreshold: 8 }
+    { reflectionThreshold: Number(process.env.REFLECTION_THRESHOLD ?? 3) }
   );
 
   const agent: GenerativeAgent = new GenerativeAgent(llm, agentMemory, {
     name: personName,
-    age: 30,
+    age: parseInt(process.env.AGENT_AGE),
     traits: process.env.AGENT_TRAITS,
     status: process.env.AGENT_STATUS,
   });

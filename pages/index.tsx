@@ -37,7 +37,7 @@ export default function Chat() {
     <div className="mx-auto w-full px-48 py-24 flex flex-col stretch">
       {messages.map(m => (
         <div key={m.id}>
-          {m.role === 'user' ? 'User: ' : ''}
+          {m.role === 'user' ? speaker + ': ' : ''}
           {m.content}
         </div>
       ))}
@@ -49,10 +49,11 @@ export default function Chat() {
             <option value="react">React to</option>
             <option value="say">Say</option>
           </select>
-          <label className={interactionType === "say" ? "" : "hidden"}>
+          <label className={(interactionType === "say" ? "" : "hidden ") + "ml-auto"}>
             <input
               className="w-full max-w-md bottom-0 border border-gray-300 rounded shadow-xl p-2"
               value={speaker}
+              placeholder="The questioner"
               onChange={(e) => setSpeaker(e.target.value)}
             />
           </label>
@@ -63,7 +64,7 @@ export default function Chat() {
               className="w-full bottom-0 border border-gray-300 rounded shadow-xl p-2"
               value={input}
               onChange={handleInputChange}
-              placeholder={interactionType === "say" ? "How do you feel about..." : "You receive a call from an unknown number saying you've won the lottery. The caller is asking for your bank account number."}
+              placeholder={interactionType === "say" ? "How do you feel about Westworld?" : "You receive a call from an unknown number saying you've won the lottery. The caller is asking for your bank account number."}
             />
           </label>
           <div role="status" className={isLoading ? "" : "hidden"}>

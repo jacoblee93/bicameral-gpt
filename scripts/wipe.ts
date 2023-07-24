@@ -18,7 +18,7 @@ const wipe = async () => {
     console.log(error);
     throw error;
   }
-  console.log("Wiped agent memory from Supabase. You can run `yarn ingest` to repopulate your agent's memory.")
+  console.log("Wiped agent memory from Supabase. You can run `yarn ingest` to repopulate your agent's memory.\n");
 };
 
 wipe();
