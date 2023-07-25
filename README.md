@@ -97,3 +97,7 @@ its future responses.
 ## Other tips
 
 Try to keep individual journal entries relatively brief and limit them to the most impactful moments. Include your reactions to them and how they made you feel.
+
+## Acknowledgements
+
+This was heavily inspired by the work of Joon Sung Park et al. on [generative agents](https://arxiv.org/abs/2304.03442).
